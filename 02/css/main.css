@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://unsplash.it/1500/1000?image=881&blur=5");
+  background-color: #018DED;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.clock {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 8px solid white;
+  background-color: black;
+  position: relative;
+}
+
+.clock::after {
+  content: ".";
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  top: 49%;
+  right: 48%;
+}
+
+.arm {
+  width: 45%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: 0.07s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0, 1.79);
+}
+
+.hours {
+  width: 30%;
+  height: 3px;
+}
+
+.minutes {
+  width: 42%;
+  height: 4px;
+}
+
+.seconds {
+  width: 47%;
+  height: 1px;
+}
